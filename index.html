@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surakshit Trader - Empowering Safe Trading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Ubuntu', sans-serif;
@@ -27,6 +28,20 @@
         header h1 {
             font-size: 3em;
             margin: 0;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4ac0d;
         }
         section {
             padding: 40px 20px;
@@ -54,6 +69,13 @@
         .highlight {
             color: #d4ac0d;
             font-weight: bold;
+        }
+        .performance-link {
+            color: #2e86de;
+            font-weight: bold;
+        }
+        .performance-link:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
@@ -111,16 +133,24 @@
 <body>
     <header>
         <h1>सुरक्षित Trader</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#why">Why Us</a>
+            <a href="#background">Background</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     
     <div class="container">
-        <section>
+        <section id="about">
             <h2>About Me: Divaksh Jain - The Surakshit Trader</h2>
             <p>Welcome to Surakshit Trader! I am Divaksh Jain, and my journey in the world of trading is rooted in a deep passion for securing the best value and empowering individuals to achieve financial success. My initial venture, Loot Deals, focused on saving money for thousands of people by grabbing the best deals. This philosophy of "A Rupee Saved is a Rupee Earned" has been the cornerstone of my approach to trading.</p>
             <p>In 2017, I transitioned into the stock market with the same mindset of finding and securing the best deals. Through years of extensive research, discipline, and consistency, I became a profitable trader in 2021. Since then, I haven’t had a single month close negatively. My expertise lies in generating substantial returns while protecting capital, embodying the essence of "Surakshit Trader."</p>
         </section>
         
-        <section>
+        <section id="why">
             <h2>Why Surakshit Trader?</h2>
             <p>Choosing Surakshit Trader means opting for a unique blend of expertise, technology, and a proven track record. Here's why you should join us:</p>
             <ul>
@@ -134,7 +164,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="background">
             <h2>Professional Background</h2>
             <ul>
                 <li><span class="highlight">Full Stack Software Developer:</span> There are only a few hundred XDA Recognized Developers in the world, and I am proud to be one of them. My technical expertise as a software developer has allowed me to incorporate advanced technology into my trading setup. I have created several tools to enhance my trading experience, ensuring efficiency and precision in my strategies.</li>
@@ -146,12 +176,12 @@
             </ul>
         </section>
         
-        <section>
+        <section id="philosophy">
             <h2>My Trading Philosophy</h2>
             <p>Trading is often considered one of the toughest mental jobs, but it doesn’t have to be. At Surakshit Trader, my goal is to simplify trading for individuals seeking financial independence. I believe in a strategic and disciplined approach, focusing on risk management and informed decision-making. This ensures that every trader can achieve their financial goals with peace of mind.</p>
         </section>
         
-        <section>
+        <section id="education">
             <h2>Educational Initiatives</h2>
             <p>Surakshit Trader is more than just a trading brand; it’s an educational initiative aimed at empowering individuals with the knowledge and strategies needed to navigate financial markets securely. Our comprehensive programs offer:</p>
             <ul>
@@ -170,14 +200,27 @@
             <img src="path_to_your_logo" alt="Surakshit Trader Logo">
         </section>
         
-        <section>
+        <section id="contact">
             <h2>Get in Touch</h2>
-            <p>Feel free to connect with me on Telegram or WhatsApp at 7877997787. Check out one of our account's performance reports <a href="https://go.divaksh.com/pnl" target="_blank">here</a>.</p>
+            <p>Feel free to connect with me on Telegram or WhatsApp at 7877997787. Check out one of our account's performance reports <a href="https://go.divaksh.com/pnl" class="performance-link" target="_blank">here</a>.</p>
         </section>
         
         <footer>
             <p>Surakshit Trader - Empowering Safe Trading</p>
         </footer>
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = link.getAttribute('href').substring(1);
+                    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
